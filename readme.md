@@ -34,11 +34,11 @@ The three joint torques are computed from the end-effector position while keepin
 ### Pipeline 
 $$
 (x, y, \theta_d)
-\;\xrightarrow{\ \text{IK}\ }\;
+\;\xrightarrow{\text{IK}}\;
 q(t)
-\;\xrightarrow{\ \text{diff}\ }\;
+\;\xrightarrow{\text{diff}}\;
 \dot q(t),\, \ddot q(t)
-\;\xrightarrow{\ \text{ID}\ }\;
+\;\xrightarrow{\text{ID}}\;
 \tau(t)
 $$
 
@@ -79,8 +79,8 @@ d_1\sin q_1
 p_{c2}(q) =
 \begin{bmatrix}
 L_1\cos q_1 + d_2\cos(q_1+q_2)\\
-L_1\sin q_1 + d_2\sin(q_1+q_2)
-\end{bmatrix},\\[6pt]
+L_1\sin q_1 + d_2\sin(q_1+q_2) 
+\end{bmatrix},\\
 p_{\mathrm{CoM}}(q) &= 
 \frac{m_1\,p_{c1}(q) + m_2\,p_{c2}(q)}{M}, \qquad M = m_1 + m_2.
 \end{aligned}
@@ -107,7 +107,7 @@ $$
 \begin{aligned}
 e &= p_{\mathrm{ref}} - p_{\mathrm{act}}, \qquad
 F = K_p e - K_d v_{\mathrm{act}},\\
-\tau &= J_{\mathrm{CoM}}(q)^{\!\top} F + G(q)
+\tau &= J_{\mathrm{CoM}}(q)^{\top} F + G(q)
 \end{aligned}
 $$
 
