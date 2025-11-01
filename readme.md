@@ -33,14 +33,9 @@ The three joint torques are computed from the end-effector position while keepin
 
 ### Pipeline 
 $$
-(x, y, \theta_d)
-\;\xrightarrow{\text{IK}}\;
-q(t)
-\;\xrightarrow{\text{diff}}\;
-\dot q(t),\, \ddot q(t)
-\;\xrightarrow{\text{ID}}\;
-\tau(t)
+(x, y, \theta_d)\xrightarrow{\text{IK}} q(t)\xrightarrow{\text{diff}} \dot q(t),\ \ddot q(t)\xrightarrow{\text{ID}} \tau(t)
 $$
+
 
 $$
 s(t) = \frac{1 - \cos(\pi t / T)}{2}, \quad q(t) = q_0 + \Delta q \, s(t)
